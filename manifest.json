@@ -1,6 +1,6 @@
 {
-  "short_name": "COVID19 Help Pakistan",
-  "name": "Help people around you survive corona pandemic",
+  "short_name": "React App",
+  "name": "Create React App Sample",
   "icons": [
     {
       "src": "favicon.ico",
