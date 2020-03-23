@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/mzo9400.github.io/HelpPeopleSurviveCorona/static/css/main.5ecd60fb.chunk.css",
+    "main.js": "/mzo9400.github.io/HelpPeopleSurviveCorona/static/js/main.7a5d53b8.chunk.js",
+    "main.js.map": "/mzo9400.github.io/HelpPeopleSurviveCorona/static/js/main.7a5d53b8.chunk.js.map",
+    "runtime-main.js": "/mzo9400.github.io/HelpPeopleSurviveCorona/static/js/runtime-main.bd3c15a9.js",
+    "runtime-main.js.map": "/mzo9400.github.io/HelpPeopleSurviveCorona/static/js/runtime-main.bd3c15a9.js.map",
+    "static/js/2.0fbc1228.chunk.js": "/mzo9400.github.io/HelpPeopleSurviveCorona/static/js/2.0fbc1228.chunk.js",
+    "static/js/2.0fbc1228.chunk.js.map": "/mzo9400.github.io/HelpPeopleSurviveCorona/static/js/2.0fbc1228.chunk.js.map",
+    "index.html": "/mzo9400.github.io/HelpPeopleSurviveCorona/index.html",
+    "precache-manifest.59d61b3509bec89a581a147aea0563d4.js": "/mzo9400.github.io/HelpPeopleSurviveCorona/precache-manifest.59d61b3509bec89a581a147aea0563d4.js",
+    "service-worker.js": "/mzo9400.github.io/HelpPeopleSurviveCorona/service-worker.js",
+    "static/css/main.5ecd60fb.chunk.css.map": "/mzo9400.github.io/HelpPeopleSurviveCorona/static/css/main.5ecd60fb.chunk.css.map",
+    "static/js/2.0fbc1228.chunk.js.LICENSE.txt": "/mzo9400.github.io/HelpPeopleSurviveCorona/static/js/2.0fbc1228.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.bd3c15a9.js",
+    "static/js/2.0fbc1228.chunk.js",
+    "static/css/main.5ecd60fb.chunk.css",
+    "static/js/main.7a5d53b8.chunk.js"
+  ]
+}
