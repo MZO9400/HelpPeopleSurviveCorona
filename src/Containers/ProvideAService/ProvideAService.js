@@ -6,7 +6,8 @@ import {
   TextField,
   Button,
   FormControlLabel,
-  Checkbox
+  Checkbox,
+  Box
 } from "@material-ui/core/";
 import DialogModal from "../../Components/DialogModal/DialogModal";
 
@@ -14,8 +15,15 @@ const useStylesInput = makeStyles(theme => ({
   root: {
     "& .MuiTextField-root": {
       margin: theme.spacing(1),
-      width: "25ch",
+      width: "100%",
       display: "flex"
+    }
+  },
+  "@media (max-device-width: 700px)": {
+    root: {
+      margin: theme.spacing(1),
+      display: "flex",
+      width: "100%"
     }
   }
 }));
@@ -68,97 +76,92 @@ export default props => {
     handleFN(event.target.value);
   };
   return (
-    <React.Fragment>
-      {validationError && (
-        <DialogModal
-          title="Validation Error"
-          text="Please enter correct details to continue"
-          accept={() => setError(false)}
+    <form
+      className={classes.root}
+      autoComplete="on"
+      style={{ justifyContent: "center", display: "flex" }}
+    >
+      <div>
+        {validationError && (
+          <DialogModal
+            title="Validation Error"
+            text="Please enter correct details to continue"
+            accept={() => setError(false)}
+          />
+        )}
+        <TextField
+          id="name"
+          type="name"
+          label="Name"
+          value={name}
+          onChange={e => handleChange(e, setName)}
+          required
         />
-      )}
-      ;
-      <form
-        className={classes.root}
-        autoComplete="on"
-        style={{ justifyContent: "center", display: "flex" }}
-      >
-        <div>
-          <div>
-            <TextField
-              id="name"
-              type="name"
-              label="Name"
-              value={name}
-              onChange={e => handleChange(e, setName)}
-              required
-            />
-            <TextField
-              id="email"
-              label="Email"
-              type="email"
-              value={email}
-              onChange={e => handleChange(e, setEmail)}
-              required
-            />
-            <TextField
-              id="phone"
-              label="Contact"
-              type="phone"
-              value={ContactNumber}
-              onChange={e => handleChange(e, setNumber)}
-              required
-            />
-            <TextField
-              id="location"
-              label="City"
-              type="location"
-              value={location}
-              onChange={e => handleChange(e, setLocation)}
-              required
-            />
-            <TextField
-              id="CNIC"
-              label="CNIC"
-              type="text"
-              value={CNIC}
-              onChange={e => handleChange(e, setCNIC)}
-              required
-            />
-            <div style={{ display: "grid" }}>
-              <FormControlLabel
-                value={helpFood}
-                control={<Checkbox color="primary" />}
-                label="Provide Food"
-                labelPlacement="end"
-                onChange={() => setFoodHelp(!helpFood)}
-              />
-              <FormControlLabel
-                value={helpDelivery}
-                control={<Checkbox color="primary" />}
-                label="Delivery"
-                labelPlacement="end"
-                onChange={() => setDeliveryHelp(!helpDelivery)}
-              />
-              <FormControlLabel
-                value={helpMoney}
-                control={<Checkbox color="primary" />}
-                label="Provide Money"
-                labelPlacement="end"
-                onChange={() => setMoney(!helpMoney)}
-              />
-            </div>
-          </div>
-          <Button
-            type="submit"
-            variant="contained"
-            color="primary"
-            onClick={e => handleSubmit(e)}
-            fullWidth
-          >
-            Submit
-          </Button>
+        <TextField
+          id="email"
+          label="Email"
+          type="email"
+          value={email}
+          onChange={e => handleChange(e, setEmail)}
+          required
+        />
+        <TextField
+          id="phone"
+          label="Contact"
+          type="phone"
+          value={ContactNumber}
+          onChange={e => handleChange(e, setNumber)}
+          required
+        />
+        <TextField
+          id="location"
+          label="City"
+          type="location"
+          value={location}
+          onChange={e => handleChange(e, setLocation)}
+          required
+        />
+        <TextField
+          id="CNIC"
+          label="CNIC"
+          type="text"
+          value={CNIC}
+          onChange={e => handleChange(e, setCNIC)}
+          required
+        />
+        <div style={{ display: "grid" }}>
+          <FormControlLabel
+            value={helpFood}
+            control={<Checkbox color="primary" />}
+            label="Provide Food"
+            labelPlacement="end"
+            onChange={() => setFoodHelp(!helpFood)}
+          />
+          <FormControlLabel
+            value={helpDelivery}
+            control={<Checkbox color="primary" />}
+            label="Delivery"
+            labelPlacement="end"
+            onChange={() => setDeliveryHelp(!helpDelivery)}
+          />
+          <FormControlLabel
+            value={helpMoney}
+            control={<Checkbox color="primary" />}
+            label="Provide Money"
+            labelPlacement="end"
+            onChange={() => setMoney(!helpMoney)}
+          />
         </div>
-      </form>
-    </React.Fragment>
+        <Button
+          type="submit"
+          variant="contained"
+          color="primary"
+          onClick={e => handleSubmit(e)}
+          fullWidth
+        >
+          Submit
+        </Button>
+      </div>
+    </form>
   );
 };
