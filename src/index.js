@@ -3,15 +3,28 @@ import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import { store } from "./Redux/Store";
+import { createMuiTheme } from "@material-ui/core/styles";
+import { ThemeProvider } from "@material-ui/styles";
+import CssBaseline from "@material-ui/core/CssBaseline";
 import "./index.css";
 import RouterContainer from "./RouterContainer";
 import * as serviceWorker from "./serviceWorker";
 
+const hours = new Date().getHours();
+const isDayTime = !hours > 6 && hours < 20;
+const theme = createMuiTheme({
+  palette: {
+    type: isDayTime ? "light" : "dark"
+  }
+});
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
       <BrowserRouter basename="/HelpPeopleSurviveCorona/">
-        <RouterContainer />
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+          <RouterContainer />
+        </ThemeProvider>
       </BrowserRouter>
     </Provider>
   </React.StrictMode>,
