@@ -11,9 +11,12 @@ import RouterContainer from "./RouterContainer";
 import * as serviceWorker from "./serviceWorker";
 
 const hours = new Date().getHours();
-const isDayTime = !hours > 6 && hours < 20;
+const isDayTime = hours > 6 && hours < 20;
 const theme = createMuiTheme({
   palette: {
+    primary: {
+      main: "#4285F4"
+    },
     type: isDayTime ? "light" : "dark"
   }
 });
