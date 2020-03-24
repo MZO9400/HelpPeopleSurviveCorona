@@ -1,27 +1,28 @@
 {
   "files": {
     "main.css": "/HelpPeopleSurviveCorona/static/css/main.b92c5048.chunk.css",
-    "main.js": "/HelpPeopleSurviveCorona/static/js/main.954ea5a2.chunk.js",
-    "main.js.map": "/HelpPeopleSurviveCorona/static/js/main.954ea5a2.chunk.js.map",
+    "main.js": "/HelpPeopleSurviveCorona/static/js/main.fad77611.chunk.js",
+    "main.js.map": "/HelpPeopleSurviveCorona/static/js/main.fad77611.chunk.js.map",
     "runtime-main.js": "/HelpPeopleSurviveCorona/static/js/runtime-main.0ce605cb.js",
     "runtime-main.js.map": "/HelpPeopleSurviveCorona/static/js/runtime-main.0ce605cb.js.map",
     "static/css/2.7c35e809.chunk.css": "/HelpPeopleSurviveCorona/static/css/2.7c35e809.chunk.css",
-    "static/js/2.240e2f27.chunk.js": "/HelpPeopleSurviveCorona/static/js/2.240e2f27.chunk.js",
-    "static/js/2.240e2f27.chunk.js.map": "/HelpPeopleSurviveCorona/static/js/2.240e2f27.chunk.js.map",
+    "static/js/2.e21f803e.chunk.js": "/HelpPeopleSurviveCorona/static/js/2.e21f803e.chunk.js",
+    "static/js/2.e21f803e.chunk.js.map": "/HelpPeopleSurviveCorona/static/js/2.e21f803e.chunk.js.map",
     "index.html": "/HelpPeopleSurviveCorona/index.html",
-    "precache-manifest.d95d245238510558c82877605c0dd829.js": "/HelpPeopleSurviveCorona/precache-manifest.d95d245238510558c82877605c0dd829.js",
+    "precache-manifest.c3774248093f2be9a249b8bbc142e1fb.js": "/HelpPeopleSurviveCorona/precache-manifest.c3774248093f2be9a249b8bbc142e1fb.js",
     "service-worker.js": "/HelpPeopleSurviveCorona/service-worker.js",
     "static/css/2.7c35e809.chunk.css.map": "/HelpPeopleSurviveCorona/static/css/2.7c35e809.chunk.css.map",
     "static/css/main.b92c5048.chunk.css.map": "/HelpPeopleSurviveCorona/static/css/main.b92c5048.chunk.css.map",
-    "static/js/2.240e2f27.chunk.js.LICENSE.txt": "/HelpPeopleSurviveCorona/static/js/2.240e2f27.chunk.js.LICENSE.txt",
-    "static/media/left.png": "/HelpPeopleSurviveCorona/static/media/left.db21b5c2.png",
-    "static/media/right.png": "/HelpPeopleSurviveCorona/static/media/right.071f690c.png"
+    "static/js/2.e21f803e.chunk.js.LICENSE.txt": "/HelpPeopleSurviveCorona/static/js/2.e21f803e.chunk.js.LICENSE.txt",
+    "static/media/1.png": "/HelpPeopleSurviveCorona/static/media/1.db21b5c2.png",
+    "static/media/2.png": "/HelpPeopleSurviveCorona/static/media/2.071f690c.png",
+    "static/media/3.png": "/HelpPeopleSurviveCorona/static/media/3.746361ab.png"
   },
   "entrypoints": [
     "static/js/runtime-main.0ce605cb.js",
     "static/css/2.7c35e809.chunk.css",
-    "static/js/2.240e2f27.chunk.js",
+    "static/js/2.e21f803e.chunk.js",
     "static/css/main.b92c5048.chunk.css",
-    "static/js/main.954ea5a2.chunk.js"
+    "static/js/main.fad77611.chunk.js"
   ]
 }
