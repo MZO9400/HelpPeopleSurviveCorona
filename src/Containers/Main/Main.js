@@ -79,7 +79,7 @@ class Main extends React.Component {
   renderData = name => {
     if (name === "None") {
       this.setState({
-        selectedStats: {},
+        selectedStats: [],
         country: name
       });
       return;
