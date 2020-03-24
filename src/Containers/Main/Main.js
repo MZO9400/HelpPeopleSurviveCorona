@@ -102,19 +102,15 @@ class Main extends React.Component {
           <FormControl>
             <InputLabel>Country</InputLabel>
             <Select
-              open={this.state.___isSelectorOpen}
-              onClose={() => this.setState({ ___isSelectorOpen: false })}
-              onOpen={() => this.setState({ ___isSelectorOpen: true })}
+              native
               value={this.state.country}
               onChange={val => this.changeHandler(val)}
             >
-              <MenuItem value="None">
-                <em>None</em>
-              </MenuItem>
+              <option value="None">None</option>
               {this.state.allCountries.map((item, key) => (
-                <MenuItem value={item} key={key}>
+                <option value={item} key={key}>
                   {item}
-                </MenuItem>
+                </option>
               ))}
             </Select>
           </FormControl>
