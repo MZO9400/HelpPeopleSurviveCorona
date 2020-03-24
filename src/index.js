@@ -6,6 +6,7 @@ import { store } from "./Redux/Store";
 import { createMuiTheme } from "@material-ui/core/styles";
 import { ThemeProvider } from "@material-ui/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
+import { SnackbarProvider } from "notistack";
 import "./index.css";
 import RouterContainer from "./RouterContainer";
 import * as serviceWorker from "./serviceWorker";
@@ -25,8 +26,10 @@ ReactDOM.render(
     <Provider store={store}>
       <BrowserRouter basename="/HelpPeopleSurviveCorona/">
         <ThemeProvider theme={theme}>
-          <CssBaseline />
-          <RouterContainer />
+          <SnackbarProvider maxSnack={3}>
+            <CssBaseline />
+            <RouterContainer />
+          </SnackbarProvider>
         </ThemeProvider>
       </BrowserRouter>
     </Provider>
