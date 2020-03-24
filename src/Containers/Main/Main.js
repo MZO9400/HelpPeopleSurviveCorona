@@ -8,8 +8,9 @@ import CovidCard from "../../Components/CovidCard/CovidCard";
 import Map from "../Maps/Maps";
 import CSS from "./Main.module.css";
 import { withRouter } from "react-router-dom";
-import left from "../../Img/left.png";
-import right from "../../Img/right.png";
+import img1 from "../../Img/1.png";
+import img2 from "../../Img/2.png";
+import img3 from "../../Img/3.png";
 
 class Main extends React.Component {
   state = {
@@ -24,7 +25,7 @@ class Main extends React.Component {
     this.getAllCountries();
     this.fetchData();
     this.getGeoInfo();
-    this.setState({ randomBin: Math.floor(Math.random() * 10) % 2 });
+    this.setState({ randomBin: Math.floor(Math.random() * 10) % 3 });
   }
   getGeoInfo = () => {
     axios
@@ -93,7 +94,13 @@ class Main extends React.Component {
     return (
       <div>
         <img
-          src={this.state.randomBin ? left : right}
+          src={
+            this.state.randomBin === 2
+              ? img3
+              : this.state.randomBin === 0
+              ? img1
+              : img2
+          }
           className={CSS.imgLeft}
           style={{ cursor: "pointer" }}
           onClick={() => this.props.history.push("/provide-a-service")}
