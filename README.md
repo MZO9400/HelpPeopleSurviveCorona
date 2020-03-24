@@ -1,3 +1,7 @@
+## Visit this project
+
+[Here](https://mzo9400.github.io/HelpPeopleSurviveCorona/)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
