@@ -40,19 +40,24 @@ export default props => {
   const [helpFood, setFoodHelp] = React.useState(false);
   const [helpRations, setRaionsHelp] = React.useState(false);
   const [helpMoney, setMoney] = React.useState(false);
-  const validation = () => {
+  const validateEmail = () => {
     const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/g;
+    return emailRegex.test(email);
+  };
+  const validateCNIC = () => {
     const CNICRegex = /^[0-9+]{5}-[0-9+]{7}-[0-9]{1}$/g;
+    return CNICRegex.test(CNIC);
+  };
+  const validateContact = () => {
     const ContactNumberRegex = /^((\+92)|(0092))-{0,1}\d{3}-{0,1}\d{7}$|^\d{11}$|^\d{4}-\d{7}$/g;
+    return ContactNumberRegex.test(ContactNumber);
+  };
+  const validation = () => {
     return (
-      email &&
-      CNIC &&
-      location &&
-      ContactNumber &&
       name &&
-      emailRegex.test(email) &&
-      CNICRegex.test(CNIC) &&
-      ContactNumberRegex.test(ContactNumber) &&
+      validateCNIC() &&
+      validateEmail() &&
+      validateContact() &&
       (helpFood || helpMoney || helpRations)
     );
   };
@@ -96,6 +101,7 @@ export default props => {
           value={name}
           onChange={e => handleChange(e, setName)}
           required
+          error={name.length === 0 ? true : false}
         />
         <TextField
           id="email"
@@ -104,6 +110,7 @@ export default props => {
           value={email}
           onChange={e => handleChange(e, setEmail)}
           required
+          error={validateEmail() ? false : true}
         />
         <TextField
           id="phone"
@@ -112,6 +119,7 @@ export default props => {
           value={ContactNumber}
           onChange={e => handleChange(e, setNumber)}
           required
+          error={validateContact() ? false : true}
         />
         <TextField
           id="location"
@@ -120,6 +128,7 @@ export default props => {
           value={location}
           onChange={e => handleChange(e, setLocation)}
           required
+          error={location.length === 0 ? true : false}
         />
         <TextField
           id="CNIC"
@@ -128,6 +137,8 @@ export default props => {
           value={CNIC}
           onChange={e => handleChange(e, setCNIC)}
           required
+          error={validateCNIC() ? false : true}
+          helperText="CNIC format: XXXXX-XXXXXXX-X"
         />
         <div style={{ display: "grid" }}>
           <FormControlLabel
