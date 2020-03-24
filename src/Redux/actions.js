@@ -37,7 +37,7 @@ export const uploadData = (
   ContactNumber,
   email,
   helpFood,
-  helpDelivery,
+  helpRations,
   helpMoney
 ) => {
   Axios.post("/volunteers.json", {
@@ -47,7 +47,7 @@ export const uploadData = (
     ContactNumber,
     email,
     helpFood,
-    helpDelivery,
+    helpRations,
     helpMoney
   });
 };

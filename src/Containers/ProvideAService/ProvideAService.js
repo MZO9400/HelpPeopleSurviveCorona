@@ -38,7 +38,7 @@ export default props => {
   const [email, setEmail] = React.useState("");
   const [validationError, setError] = React.useState(false);
   const [helpFood, setFoodHelp] = React.useState(false);
-  const [helpDelivery, setDeliveryHelp] = React.useState(false);
+  const [helpRations, setRaionsHelp] = React.useState(false);
   const [helpMoney, setMoney] = React.useState(false);
   const validation = () => {
     const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/g;
@@ -53,7 +53,7 @@ export default props => {
       emailRegex.test(email) &&
       CNICRegex.test(CNIC) &&
       ContactNumberRegex.test(ContactNumber) &&
-      (helpFood || helpMoney || helpDelivery)
+      (helpFood || helpMoney || helpRations)
     );
   };
   const handleSubmit = event => {
@@ -68,7 +68,7 @@ export default props => {
       ContactNumber,
       email,
       helpFood,
-      helpDelivery,
+      helpRations,
       helpMoney
     );
   };
@@ -133,16 +133,16 @@ export default props => {
           <FormControlLabel
             value={helpFood}
             control={<Checkbox color="primary" />}
-            label="Provide Food"
+            label="Provide Cooked Food"
             labelPlacement="end"
             onChange={() => setFoodHelp(!helpFood)}
           />
           <FormControlLabel
-            value={helpDelivery}
+            value={helpRations}
             control={<Checkbox color="primary" />}
-            label="Delivery"
+            label="Provide Dry Rations"
             labelPlacement="end"
-            onChange={() => setDeliveryHelp(!helpDelivery)}
+            onChange={() => setRaionsHelp(!helpRations)}
           />
           <FormControlLabel
             value={helpMoney}

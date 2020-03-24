@@ -7,14 +7,14 @@ import Typography from "@material-ui/core/Typography";
 
 export default props => {
   let help = [];
-  if (props.helpDelivery) {
-    help.push("Delivery");
+  if (props.helpRations) {
+    help.push("Dry Rations");
   }
   if (props.helpMoney) {
     help.push("Monetary");
   }
   if (props.helpFood) {
-    help.push("Food");
+    help.push("Cooked Food");
   }
   return (
     <Card variant="outlined" key={props.CNIC}>
